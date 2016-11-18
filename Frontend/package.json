@@ -1,0 +1,23 @@
+{
+  "name": "ctgs-frontend",
+  "version": "1.0.0",
+  "description": "Clinet-Side CTGS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/aalha028/CTGS.git"
+  },
+  "author": "Abdulrahman Alhamoudi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/aalha028/CTGS/issues"
+  },
+  "homepage": "https://gitlab.com/aalha028/CTGS#README",
+  "devDependencies": {
+    "source-map-loader": "^0.1.5",
+    "ts-loader": "^1.2.1"
+  }
+}
