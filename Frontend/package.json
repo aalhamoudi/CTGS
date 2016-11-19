@@ -19,5 +19,15 @@
   "devDependencies": {
     "source-map-loader": "^0.1.5",
     "ts-loader": "^1.2.1"
+  },
+  "dependencies": {
+    "@types/material-ui": "^0.16.40",
+    "@types/react": "^0.14.49",
+    "@types/react-dom": "^0.14.18",
+    "@types/react-tap-event-plugin": "0.0.30",
+    "material-ui": "^0.16.4",
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
+    "react-tap-event-plugin": "^2.0.1"
   }
 }
