@@ -8,7 +8,7 @@
         },
         "users": {
             "create": {
-                "path": "/users/new?params=:tags",
+                "path": "/users/new?params#:tags",
                 "method": "create"
             },
             "get": {
@@ -16,7 +16,7 @@
                 "method": "get"
             },
             "update": {
-                "path": "/users/:id/update?params=:tags",
+                "path": "/users/:id/update?:tags",
                 "method": "update"
             },
             "delete": {

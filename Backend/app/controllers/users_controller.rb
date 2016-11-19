@@ -7,9 +7,10 @@ class UsersController < ApplicationController
 	# [login_id, password_digest, email]
     def create
         tags = params[:tags]
-        tags = parser.parse(tags)
-        model = DBAdapter.save_model(:user, tags)
-        method_to_call = model.saved? ? JSONResponse.method("get_json_success") : JSONResponse.method("get_json_error_not_saved")
+        tags = Parsing::ParamsParser.parse(tags)
+        method_to_call = DBAdapter.create_model(:user, tags)
+        model = method_to_call[1]
+        method_to_call = method_to_call[0]
         render :json => method_to_call.call(model)
     end
 
