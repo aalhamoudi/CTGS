@@ -522,3 +522,15 @@ Started GET "/" for ::1 at 2016-11-19 11:38:06 -0500
 Processing by Rails::WelcomeController#index as HTML
   Rendered /home/akinyele/.rvm/gems/ruby-2.3.1/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
 Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-19 15:17:19 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered C:/Runtimes/Ruby/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (10.0ms)
+Completed 200 OK in 108ms (Views: 88.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-11-19 15:17:50 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered C:/Runtimes/Ruby/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms)
