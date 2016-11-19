@@ -15,3 +15,11 @@ class JSONParser
 	end
 
 end
+
+class ParamParams
+
+	def parse(tags_string)
+		
+	end
+
+end
