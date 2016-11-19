@@ -1,5 +1,11 @@
+routes = Routes.method(:all)
+
+
 Rails.application.routes.draw do
 
-  root 'application#root'
+	# Routes managed by ApplicationController
+	get Routes.all(:application, :root, :path) => Routes.all(:application, :root, :method)
+
+	# Routes managed by UserController
 
 end
