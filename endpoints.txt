@@ -1,0 +1,6 @@
+Hostname to test : http://seg3502.akinyele.ca
+
+/users/new?params=:tags
+/users/:id/get
+/users/:id/update?params=:tags
+/users/:id/delete
