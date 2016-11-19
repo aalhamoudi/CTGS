@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def root
-  	render :json => JSONParser.json(0, "Welcome!")
+  	render :json => JSONResponse.json(0, "Welcome!")
   end
 
 end

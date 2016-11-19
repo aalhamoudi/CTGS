@@ -1,28 +1,28 @@
 {
-	"routes": {
-		"application": {
-			"root": {
-				"path": "/4",
-				"method": "root"
-			}
-		},
-		"users": {
-			"create": {
-				"path": "/users/new?params=:tags",
-				"method": "create"
-			},
-			"get": {
-				"path": "/users/:id/get",
-				"method": "get"
-			},
-			"update": {
-				"path": "/users/:id/update",
-				"method": "update"
-			},
-			"delete": {
-				"path": "/users/:id/delete",
-				"method": "delete"
-			}
-		}
-	}
+    "routes": {
+        "application": {
+            "root": {
+                "path": "/",
+                "method": "root"
+            }
+        },
+        "users": {
+            "create": {
+                "path": "/users/new?params=:tags",
+                "method": "create"
+            },
+            "get": {
+                "path": "/users/:id/get",
+                "method": "get"
+            },
+            "update": {
+                "path": "/users/:id/update?params=:tags",
+                "method": "update"
+            },
+            "delete": {
+                "path": "/users/:id/delete",
+                "method": "delete"
+            }
+        }
+    }
 }
