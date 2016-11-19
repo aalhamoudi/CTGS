@@ -9,8 +9,7 @@ class DBAdapter
 
 	def self.save_model(model_type, params)
 		user = User.find(params[:id])
-		user.update_attributes params
-
+		return user if user.update_attributes params
 	end
 
 	def self.update_model(model, params, required)

@@ -12,6 +12,7 @@ class Routes
 		tags.each do |tag|
 			all_routes = all_routes[tag.to_s]
 			return "#{controller_name}##{all_routes}" if tag == :method
+			return "/api#{all_routes}" if tag == :path
 		end
 		all_routes
 	end
