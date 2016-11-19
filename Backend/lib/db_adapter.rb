@@ -8,15 +8,17 @@ class DBAdapter
 	end
 
 	def self.save_model(model_type, params)
+		user = User.find(params[:id])
+		user.update_attributes params
 
 	end
 
 	def self.update_model(model, params, required)
-
+		
 	end
 
 	def self.delete_model(id)
-
+		
 	end
 
 end

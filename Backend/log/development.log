@@ -614,3 +614,18 @@ Processing by UsersController#get as HTML
   Parameters: {"id"=>"1"}
   [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
 Completed 200 OK in 57ms (Views: 0.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/1/get" for ::1 at 2016-11-19 14:40:39 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#get as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 53ms (Views: 0.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/1/get" for ::1 at 2016-11-19 14:42:08 -0500
+Processing by UsersController#get as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms)
