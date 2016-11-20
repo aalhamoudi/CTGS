@@ -9,7 +9,7 @@ class UsersController < ApplicationController
         tags = params[:tags]
         tags = parser.parse(tags)
         model = DBAdapter.save_model(:user, tags)
-        method_to_call = model.saved? ? JSONResponse.method("get_json_success") : JSONResponse.method("get_json_error_not_saved")
+        method_to_call = model.nil? ? JSONResponse.method("get_json_success") : JSONResponse.method("get_json_error_not_saved")
         render :json => method_to_call.call(model)
     end
 
