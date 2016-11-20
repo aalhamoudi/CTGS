@@ -11,6 +11,7 @@ class Routes
 		return all_routes if tags.nil? or tags.empty?
 		controller_name = tags[0].to_s
 		tags.each do |tag|
+			#next if self.is_testing and all_routes["only_testing"]
 			all_routes = all_routes[tag.to_s]
 			return "#{controller_name}##{all_routes}" if tag == :method
 			return "#{self._api}#{all_routes}" if tag == :path
@@ -18,8 +19,17 @@ class Routes
 		all_routes
 	end
 	
+	# Marker methods
 	def self.add_api
 		@do_it = true
+	end
+
+	def self.set_testing
+		@testing = true
+	end
+
+	def self.is_testing
+		@testing
 	end
 
 	private

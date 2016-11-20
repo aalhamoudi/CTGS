@@ -1,4 +1,10 @@
 {
+    "general": [
+        {
+            "id": "gen0",
+            "message": "Hmm, this doesn't seem right. Please do not use integer IDs for creating a new account. This is just bad practice."
+        }
+    ],
     "users": [
         {
             "id": "usr0",
@@ -13,11 +19,15 @@
             "message": "User password was not correct."
         },
         {
-            "id": "",
-            "message": ""
+            "id": "usr3",
+            "message": "Could not delete this priviledged user: at least one is needed."
+        },
+        {
+            "id": "usr4",
+            "message": "Invalid username or password."
         }
     ],
-    "registering": [
+    "registration": [
         {
             "id": "reg0",
             "message": "Login ID and password have to be entered."

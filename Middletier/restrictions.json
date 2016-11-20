@@ -1,0 +1,17 @@
+{
+    "users": {
+        "login_id": {
+            "min": 6,
+            "max": 50,
+            "required": true
+        },
+        "password": {
+            "min": 6,
+            "max": null,
+            "required": true
+        },
+        "email": {
+            "required": false
+        }
+    }
+}

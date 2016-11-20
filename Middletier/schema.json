@@ -8,20 +8,25 @@
         },
         "users": {
             "create": {
-                "path": "/users/new?params#:tags",
-                "method": "create"
+                "path": "/users/new/:tags",
+                "method": "create",
+                "alternative": "/users/create/:tags"
             },
             "get": {
                 "path": "/users/:id/get",
                 "method": "get"
             },
             "update": {
-                "path": "/users/:id/update?:tags",
+                "path": "/users/:id/update/:tags",
                 "method": "update"
             },
             "delete": {
                 "path": "/users/:id/delete",
                 "method": "delete"
+            },
+            "login": {
+                "path": "/users/login/:tags",
+                "method": "login"
             }
         }
     }

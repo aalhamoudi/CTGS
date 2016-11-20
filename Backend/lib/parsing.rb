@@ -1,24 +1,30 @@
 class Parsing
 
+    # This class contains Parsing related classes.
+
     class JSONParser
+        # This class is similar to json_response.rb's 'JSONResponse'.
 
         # This is a class method that simply takes a object then transforms
         # it into a regular json.
-
         def self.json(code=0, message)
+            raise AppError::UnusableClassOrMethodError.new("Unsupported feature.")
             json = {
                 code: code,
                 message: message
             }
         end
 
+        # Return default JSON. Used only for testing.
         def self.default
+            raise AppError::UnusableClassOrMethodError.new("Unsupported feature.")
             self.json(0, "**No message**")
         end
 
     end
 
     class ParamsParser
+        # This class is reponsible for parsing parameters of all sorts.
 
         DEFAULT_OPTIONS = {
             "separators" => {
@@ -52,7 +58,7 @@ class Parsing
                     found = tags_string.include? separator
                     break if found
                 end
-                raise "No valid separator operator was found" if !found
+                raise AppError.new "No valid separator operator was found" if !found
             end
 
             # Assign other assignment operators if needed
@@ -63,7 +69,7 @@ class Parsing
                     found = tags_string.include? assignment
                     break if found
                 end
-                raise "No valid assignment operator was found" if !found
+                raise AppError.new "No valid assignment operator was found" if !found
             end
 
             # Initialize the hash to return
@@ -77,9 +83,10 @@ class Parsing
                 sub_arg = sub_arg.strip
                 p "#{sub_arg}: #{sub_arg.class}"
                 sub_arg = sub_arg.split assignment
-                raise Exception.new "Exactly 2 assignment operators are needed \"#{assignment}\"." if sub_arg.size != 2
+                raise AppError.new "Exactly 2 assignment operators (\"#{assignment}\") are needed." if sub_arg.size != 2
                 key = sub_arg[0]
                 value = sub_arg[1]
+                value = nil if value == "nil" or value == "null" or value == "None"
                 result[key] = value
             end
             result

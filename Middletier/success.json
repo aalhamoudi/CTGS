@@ -1,0 +1,26 @@
+{
+    "general": [
+        {
+            "id": "suc0",
+            "message": "Operation Successful."
+        }
+    ],
+    "users": [
+        {
+            "id": "suc1",
+            "message": "User was successfully created."
+        },
+        {
+            "id": "suc2",
+            "message": "User was successfully updated."
+        },
+        {
+            "id": "suc3",
+            "message": "User was successfully deleted."
+        },
+        {
+            "id": "suc4",
+            "message": "User was successfully authenticated."
+        }
+    ]
+}
