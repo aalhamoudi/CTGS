@@ -1,0 +1,54 @@
+{
+    "users": [
+        {
+            "id": "usr0",
+            "message": "User was not found."
+        },
+        {
+            "id": "usr1",
+            "message": "Password cannot be empty."
+        },
+        {
+            "id": "usr2",
+            "message": "User password was not correct."
+        },
+        {
+            "id": "",
+            "message": ""
+        }
+    ],
+    "registering": [
+        {
+            "id": "reg0",
+            "message": "Login ID and password have to be entered."
+        },
+        {
+            "id": "reg1",
+            "message": "Login ID is already taken or is reserved."
+        },
+        {
+            "id": "reg2",
+            "message": "Login ID contains invalid characters."
+        },
+        {
+            "id": "reg3",
+            "message": "Login ID is too short."
+        },
+        {
+            "id": "reg4",
+            "message": "Password must be input."
+        },
+        {
+            "id": "reg5",
+            "message": "Password is too short."
+        },
+        {
+            "id": "reg6",
+            "message": "The password and password confirmation do not match."
+        },
+        {
+            "id": "reg7",
+            "message": "The email address is not valid."
+        }
+    ]
+}

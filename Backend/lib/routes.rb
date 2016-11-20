@@ -2,7 +2,8 @@ class Routes
 
 	# This class is responsible for retrieving all paths from the config file.
 
-	ALL_ROUTES_JSON_PATH = "config/routes.json"
+	#ALL_ROUTES_JSON_PATH = "config/routes.json"
+	ALL_ROUTES_JSON_PATH = "../Middletier/errors.json"
 	CONTENTS = []
 
 	def self.all(*tags)
@@ -24,20 +25,8 @@ class Routes
 	private
 		def self._config_contents
 			# Empty out CONTENTS
-			CONTENTS.reject { |e| e }
-
-			# And begin the parsing process
-			begin
-				to_parse = open ALL_ROUTES_JSON_PATH, "r" do |io| io.read end
-			rescue Errno::ENOENT => e
-				puts e
-			end
-			parsed = JSON.parse to_parse
-			if parsed
-				parsed.each do |c|
-					CONTENTS.push c
-				end
-			end
+			JSONConfig.get(ALL_ROUTES_JSON_PATH)
+			#CONTENTS
 		end
 	
 		def self._api
