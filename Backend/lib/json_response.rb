@@ -1,10 +1,10 @@
 class JSONResponse
 
-	def get_json_sucess(model)
+	def self.get_json_success(model)
 		model.to_json
 	end
 
-	def get_json_error_not_saved(model)
+	def self.get_json_error_not_saved(model)
 		{
 			"code" => 1,
 			"messages" => model.errors.full_messages
