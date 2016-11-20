@@ -3,7 +3,7 @@ class Routes
 	# This class is responsible for retrieving all paths from the config file.
 
 	#ALL_ROUTES_JSON_PATH = "config/routes.json"
-	ALL_ROUTES_JSON_PATH = "../Middletier/errors.json"
+	ALL_ROUTES_JSON_PATH = "../Middletier/schema.json"
 	CONTENTS = []
 
 	def self.all(*tags)
