@@ -31,6 +31,29 @@ class AppError < StandardError
         @message = message
     end
 
+    class UndefinedRouteOrActionError < AppError
+        # An instance of this class will be raised when a requested route does
+        # not exist.
+        def initialize(message=nil, code=404)
+            if message.instance_of? Hash
+                @code = message["id"]
+                @message = message["message"]
+            else
+                @code = code
+                @message = message
+            end
+        end
+
+        def message
+            "This requested route does not exist."
+        end
+
+        # Set the message
+        def message=(message)
+            @message = message
+        end
+    end
+
     class UnusableClassOrMethodError < AppError
         # An instance of this class will be raised when a feature should, is,
         # can or will not be used. All methods/classes deemed deprecated will

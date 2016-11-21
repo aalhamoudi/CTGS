@@ -80,9 +80,7 @@ class Parsing
             sub_arguments = tags_string.split(separator)
             # Iterate over the arguments
             sub_arguments.each do |sub_arg|
-                sub_arg = sub_arg.strip
-                p "#{sub_arg}: #{sub_arg.class}"
-                sub_arg = sub_arg.split assignment
+                sub_arg = sub_arg.strip.split assignment
                 raise AppError.new "Exactly 2 assignment operators (\"#{assignment}\") are needed." if sub_arg.size != 2
                 key = sub_arg[0]
                 value = sub_arg[1]

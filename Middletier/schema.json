@@ -4,29 +4,52 @@
             "root": {
                 "path": "/",
                 "method": "root"
+            },
+            "teapot": {
+                "path": "/418",
+                "method": "teapot"
             }
         },
         "users": {
             "create": {
                 "path": "/users/new/:tags",
                 "method": "create",
-                "alternative": "/users/create/:tags"
+                "alternative": "/users/create/:tags",
+                "authentication": false
             },
             "get": {
                 "path": "/users/:id/get",
-                "method": "get"
+                "method": "get",
+                "authentication": true,
+                "as_admin": true
             },
             "update": {
                 "path": "/users/:id/update/:tags",
-                "method": "update"
+                "method": "update",
+                "authentication": true,
+                "as_admin": false
             },
             "delete": {
                 "path": "/users/:id/delete",
-                "method": "delete"
+                "method": "delete",
+                "authentication": true,
+                "as_admin": false
             },
             "login": {
                 "path": "/users/login/:tags",
-                "method": "login"
+                "method": "login",
+                "authentication": false
+            }
+        },
+        "grant_system": {
+            "authentication": true,
+            "dispatch_system": {
+                "path": "/system/action=:action",
+                "alternative": "/system/action=:action/:params",
+                "method": "dispatch_system",
+                "actions": [
+                    "check_logged_in"
+                ]
             }
         }
     }

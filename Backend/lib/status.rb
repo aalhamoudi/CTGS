@@ -60,6 +60,8 @@ class Status
         ERROR_USER_INVALID_PASSWORD = self.users[2]
         ERROR_USER_ONLY_USER = self.users[3]
         ERROR_USER_INVALID_USERNAME_PASSWORD = self.users[4]
+        ERROR_USER_AUTHENTICATION_REQUIRED = self.users[5]
+        ERROR_USER_ADMIN_REQUIRED = self.users[6]
 
         # User registration related operations
         ERROR_USER_REGISTRATION_MISSING_CREDENTIALS = self.registration[0]
@@ -81,6 +83,7 @@ class Status
             end
             message = exception.message if exception.class < Exception
             messages = [message]
+            additional_messages.reject! { |m| m.to_s.strip.size == 0 }
             messages = messages + additional_messages if additional_messages.size > 0
             {
                 "code" => code,

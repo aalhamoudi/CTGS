@@ -1,10 +1,19 @@
 class UsersController < ApplicationController
+    # This class represents the User controller and is responsible for
+    # managing the user-related actions and thus methods such as the
+    # following :
+    # => login (check if the username and password are valid)
+    # => create (called upon registration request)
+    # => get (returns and instance of the user based its unique id given on creation)
+    # => update (updating the user's password, email address, etc.)
+    # => delete (deleting the user from the database (aka destroy model))
 
 	parser = Parsing::ParamsParser
 
 	# The create controller. This method is responsible for creating a user given
 	# certain parameters. Here are the params expected by the client:
 	# [login_id, password, password_confirmation, email]
+    # => Use case : "Add User"
     def create
         tags = params[:tags]
         tags = Parsing::ParamsParser.parse(tags)

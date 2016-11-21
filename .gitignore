@@ -1,0 +1,11 @@
+# All temporary rails files
+Backend/tmp
+
+# All rails log files
+*.log
+
+# All rails secret files
+Backend/secret-*
+
+# All rails assets files (eg: JavaScript, CoffeeScripts, CSS, SaSS, Images, etc.)
+Backend/app/assets/

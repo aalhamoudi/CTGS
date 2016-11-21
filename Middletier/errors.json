@@ -25,6 +25,14 @@
         {
             "id": "usr4",
             "message": "Invalid username or password."
+        },
+        {
+            "id": "usr5",
+            "message": "Authentication is required. Please login."
+        },
+        {
+            "id": "usr6",
+            "message": "Authentication as a priviledged user is required."
         }
     ],
     "registration": [
