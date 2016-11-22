@@ -1,4 +1,5 @@
 class Routes
+    p "******** Routes!!!"
 
 	# This class is responsible for retrieving all paths from the config file.
 

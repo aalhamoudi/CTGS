@@ -4,12 +4,6 @@ class GrantSystemController < ApplicationController
     # description.
     # => 
     # => 
-    # => 
-    # => 
-    # => 
-    # => 
-    # => 
-    # => 
     # This controller reprensent the system as its kernel, so all operations
     # must be directed to this controller. The controller will be responsible
     # for ultimately communicating with the application's front end.
@@ -19,13 +13,18 @@ class GrantSystemController < ApplicationController
     # will passed to the controller method. Any method that requires parameters
     # and does not receive any will raise an AppError::NoParamsFoundError to the
     # client.
+
+    p "******** GrantSystemController!!!"
+
     def dispatch_system
+        p "**** Dispatching system!!"
         action = param[:action]
         action = action.strip.to_s
         begin
+            p "Dispatching system"
             _raise_on_error("No action was specified.") if action.size == 0
             method_to_call = "self.#{action}"
-            self.method(action).call
+            #method(action).call
         rescue NoMethodError
             _raise_on_error("Invalid action \"#{action}\".")
         rescue NameError
@@ -34,8 +33,13 @@ class GrantSystemController < ApplicationController
     end
 
     def check_logged_in
+        p "**** #{params["action"]}!!"
         p params.include? "params"
         render :json => _check_useless_params({"status" => logged_in?}, params["params"]).to_json
+    end
+
+    def test
+        render :text => "Test"
     end
 
     private

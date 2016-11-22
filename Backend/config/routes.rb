@@ -22,6 +22,6 @@ Rails.application.routes.draw do
     get Routes.all(:grant_system, :dispatch_system, :alternative) => Routes.all(:grant_system, :dispatch_system, :method)
 
     # Special cases
-    match "*a" => 'application#does_not_exist_json', via: :all
+    match "*a" => Routes.all(:application, :does_not_exist_json, :method), via: :all
 
 end

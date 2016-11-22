@@ -78,6 +78,7 @@ class ApplicationController < ActionController::Base
   private
     def process(action, *args)
       super
+      "********** Processing #{action}!!!"
       rescue AbstractController::ActionNotFound => e
       does_not_exist_json(e)
     end

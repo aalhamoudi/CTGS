@@ -8,6 +8,10 @@
             "teapot": {
                 "path": "/418",
                 "method": "teapot"
+            },
+            "does_not_exist_json": {
+                "path": null,
+                "method": "does_not_exist_json"
             }
         },
         "users": {
