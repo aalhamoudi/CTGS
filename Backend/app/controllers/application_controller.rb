@@ -40,7 +40,7 @@ class ApplicationController < ActionController::Base
     render :json => Status::Errors.exception_json(exception, code).to_json, :status => code
   end
 
-  # The ressource was not found or is gone.
+  # The resource was not found or is gone.
   def does_not_exist_json(exception=nil)
     message = exception.message if !exception.nil?
     exception = AppError::UndefinedRouteOrActionError.new
